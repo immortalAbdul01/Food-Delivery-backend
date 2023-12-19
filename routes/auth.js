@@ -7,6 +7,7 @@ const router = express.Router();
 
 router.post('/signup', authController.signup);
 router.post('/login', authController.login);
-// Define login route and other authentication routes as needed
+router.post('/forgot-password', authController.forgotPassword); // New route for forgot password
+router.post('/reset-password', authController.resetPassword); // New route for resetting password
 
 module.exports = router;
