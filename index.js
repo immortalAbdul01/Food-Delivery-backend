@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const authRoutes = require('./routes/auth')
 const connectDB = require('./db');
+const resturantRoutes= require('./routes/resturant')
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.json()); // Parse incoming JSON requests
 
 
 app.use('/auth', authRoutes);
+app.use('/restaurant', resturantRoutes);
 
 
 
